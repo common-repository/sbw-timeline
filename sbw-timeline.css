@@ -1,0 +1,145 @@
+#timeline-wrapper {
+    position: relative;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+#timeline-line {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    height: 105%;
+    content: '';
+    width: 5px;
+    background-color: #f7f7f7;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 30px;
+    right: -16px;
+}
+
+.timeline-item:nth-child(2n) .timeline-icon {
+    left: -6px;
+    right: auto;
+}
+
+.timeline-item:first-child .timeline-icon {
+    right: -38px;
+    top: 11px;
+}
+
+.timeline-item:first-child i.fa-heart {
+    font-size: 60px;
+}
+
+@media (max-width: 768px) {
+    #timeline-line {
+        left: auto;
+        right: 6%;
+    }
+    #timeline-wrapper .timeline-item .timeline-icon {
+        position: absolute;
+        right: 6%;
+        left: auto;
+        transform: translateX(50%);
+    }
+    #timeline-wrapper .timeline-item:first-child .timeline-icon {
+        top: 11px;
+    }
+    #timeline-wrapper .timeline-item .timeline-icon i {
+        margin-left: -4px;
+    }
+}
+
+.timeline-icon {
+    color: #ffccd3;
+}
+
+#timeline-line .fa-heart {
+    position: absolute;
+    top: -36px;
+    margin-left: -20px;
+    left: 50%;
+    font-size: 40px;
+    color: #f7f7f7;
+}
+
+.timeline-content-wrapper {
+    position: relative;
+    width: 380px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0 15px;
+    box-shadow: 0px 5px 33px #ddd
+}
+
+.timeline-content-wrapper .image-wrap {
+    position: relative;
+}
+
+.timeline-content-wrapper .image-wrap div:first-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    border: 1px solid #fff;
+}
+
+.timeline-content-wrapper .text-wrapper {
+    padding: 30px 20px 20px;
+}
+
+.timeline-content-wrapper .text-wrapper h3 {
+    margin: 0 0 5px;
+    line-height: 1;
+}
+
+.timeline-content-wrapper .text-wrapper .date {
+    display: block;
+    margin: 0 0 20px;
+}
+
+#timeline-last-element {
+    position: relative;
+}
+
+#timeline-last-element .timeline-icon {
+    top: -16px;
+    left: 50%;
+    right: auto;
+    z-index: 999;
+    margin-left: -9px;
+    font-size: 24px;
+}
+
+#timeline-last-element .timeline-content-wrapper {
+    width: 530px;
+    padding-bottom: 0;
+}
+
+#timeline-last-element .timeline-content-wrapper .text-wrapper {
+    padding: 40px 20px 40px
+}
+
+#timeline-last-element .timeline-content-wrapper::after {
+    display: block;
+    z-index: 2;
+    content: '';
+    width: 170px;
+    height: 170px;
+    background-image: url('../inc/img/roses_cut_out.png');
+    background-size: 100%;
+    position: absolute;
+    left: -43px;
+    background-repeat: no-repeat;
+    bottom: -83px;
+    transform: scaleX(-1);
+}
